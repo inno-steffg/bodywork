@@ -1,0 +1,11 @@
+version: "1.0"
+project:
+  name: bodyworks
+  docker_image: iosg/bodyworks:latest
+  DAG: score_data
+stages:
+  score_data:
+    batch:
+      max_completion_time_seconds: 120
+      retries: 0
+      
